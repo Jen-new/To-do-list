@@ -21,6 +21,7 @@ $tasks = $db->query("SELECT * FROM tasks ORDER BY created_at DESC")->fetchAll();
         <li>
             <?= htmlspecialchars($task['task']) ?>
             <a href="edit_task.php?id=<?= $task['id'] ?>">Edit</a>
+            <a href="delete_task.php?id=<?= $task['id'] ?>">Delete</a>
         </li>
     <?php endforeach; ?>
 </ul>
